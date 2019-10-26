@@ -1,16 +1,13 @@
 import java.util.Scanner;
 public class Work1 {
     public static void main(String[] args) {
-
-        System.out.print ("Введите радиус R=");
         Scanner inputFigure = new Scanner (System.in);
+        System.out.print ("Введите радиус R=");
         int r = inputFigure.nextInt ();
         System.out.print ("Введите координату х=");
-        Scanner inputFigure1 = new Scanner (System.in);
-        int x = inputFigure1.nextInt ();
+        int x = inputFigure.nextInt ();
         System.out.print ("Введите координату y=");
-        Scanner inputFigure2 = new Scanner (System.in);
-        int y = inputFigure2.nextInt ();
+        int y = inputFigure.nextInt ();
 
         if (Math.abs(x) <= r && Math.abs(y) <= r) {
             System.out.println("yes,");
@@ -30,11 +27,17 @@ public class Work1 {
                 else if (x == 0 && y == 0) {
             System.out.println("Точка находися в начале координат");
         }
-                else if (x == 0) {
-            System.out.println("Точка находится на оси 'x'");
+
+
+        if (x == 0 && y > 0) {
+            System.out.println("пересечение I,II четверти");
+        } else if (x == 0 && y < 0) {
+            System.out.println("пересечение III,IV четверти");
         }
-                    else if (y == 0)  {
-                        System.out.println("Точка находится на оси 'y'");
-                }
+        if (x > 0 && y == 0) {
+            System.out.println("пересечение I,IV четверти");
+        } else if (x < 0 && y == 0) {
+            System.out.println("пересечение II,III четверти");
+        }
             }
         }
