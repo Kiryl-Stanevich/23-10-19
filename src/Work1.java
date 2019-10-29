@@ -24,20 +24,35 @@ public class Work1 {
             else if (x > 0 && y < 0) {
             System.out.println("IV");
         }
-                else if (x == 0 && y == 0) {
+            if (x == 0) {
+ if (y>0)
+ System.out.println("пересечение I,II четверти");
+ if (y<0)
+ System.out.println("пересечение III,IV четверти");
+ if (y==0)
+ System.out.println("Точка находися в начале координат");}
+/*        else if (x == 0 && y == 0) {
             System.out.println("Точка находися в начале координат");
         }
-
-
         if (x == 0 && y > 0) {
             System.out.println("пересечение I,II четверти");
         } else if (x == 0 && y < 0) {
             System.out.println("пересечение III,IV четверти");
         }
-        if (x > 0 && y == 0) {
+
+ */
+        if (y == 0) {
+            if (x>0)
+                System.out.println("пересечение I,IV четверти");
+            if (x<0)
+                System.out.println("пересечение II,III четверти");}
+
+    /*    if (x > 0 && y == 0) {
             System.out.println("пересечение I,IV четверти");
         } else if (x < 0 && y == 0) {
             System.out.println("пересечение II,III четверти");
         }
+
+     */
             }
         }
