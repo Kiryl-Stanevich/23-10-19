@@ -1,15 +1,14 @@
 import java.util.Scanner;
 public class Work1 {
-    public static int x,y,r;
 
-    public static void func1() {
+    public static void isPointInCircle(int r,int x,int y) {
         if (Math.abs(x) <= r && Math.abs(y) <= r) {
             System.out.println("yes,");
         } else {
             System.out.println("no,");
         }
     }
-        public static void func2(){
+        public static void isPointAtIntersection(int r,int x,int y){
             if (x == 0) {
                 if (y>0)
                     System.out.println("пересечение I,II четверти");
@@ -25,8 +24,7 @@ public class Work1 {
 
         }
 
-
-        public static void func3() {
+        public static void isPointInAQuarter(int r,int x,int y) {
             if (x > 0 && y > 0) {
                 System.out.println("I");
             } else if (x < 0 && y > 0) {
@@ -47,8 +45,8 @@ public class Work1 {
         int x = inputFigure.nextInt();
         System.out.print("Введите координату y=");
         int y = inputFigure.nextInt();
-        func1();
-        func2();
-        func3();
+        isPointInCircle(r,x,y);
+        isPointAtIntersection(r,x,y);
+        isPointInAQuarter(r,x,y);
     }
 }
